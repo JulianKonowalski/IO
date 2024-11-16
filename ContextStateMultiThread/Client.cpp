@@ -13,7 +13,7 @@ void Client::run(void) {
 	std::condition_variable* contextCv = mContext->getConditionVariable();
 
 	while (true) {
-		if (waitForInput()) { break; }
+		if (waitForInput()) { exit(0); } //it's not the right way to do it, but it's just a demo
 		contextMutex->lock();
 		mContext->getState()->changeState();
 		contextMutex->unlock();
