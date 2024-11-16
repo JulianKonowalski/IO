@@ -21,10 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f25d269d-a6f5-44a9-80d8-8afb8c3564eb}</ProjectGuid>
-    <RootNamespace>IO</RootNamespace>
+    <ProjectGuid>{9a1c4f00-6a07-43e5-81b1-1a9081d03f14}</ProjectGuid>
+    <RootNamespace>ContextStateSingleThread</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>ContextStateSingleThread</ProjectName>
+    <ProjectName>ContextStateMultiThread</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -128,15 +128,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Context.cpp" />
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="ConcreteState1.h" />
-    <ClInclude Include="ConcreteState2.h" />
-    <ClInclude Include="ConcreteState3.h" />
-    <ClInclude Include="Context.h" />
-    <ClInclude Include="State.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
