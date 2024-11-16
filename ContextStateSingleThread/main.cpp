@@ -1,15 +1,12 @@
 #include "Context.h"
-#include "Client.h"
-#include <thread>
+#include "State.h"
 
 int main(void) {
 	Context* context = new Context();
-	Client* client = new Client(context);
-
-	std::thread userThread(&Client::run, client);
-	std::thread contextThread(&Context::run, context);
-	userThread.join();
-	contextThread.join();
-
+	for (int i = 0; i < 3; ++i) {
+		State* currentState = context->getState();
+		currentState->sayHi();
+		currentState->changeState();
+	}
 	return 0;
 }
