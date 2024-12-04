@@ -15,6 +15,7 @@
 class Person {
 public:
 	Person();
+	Singleton* getDataPool(void) const { return Singleton::getInstance(); }
 	void run();
 
 private:

@@ -5,12 +5,13 @@
 #include <iostream>
 
 #include "Singleton.hpp"
+#include "Person.hpp"
 
 #define WAITING_TIME 100
 
 class Observer {
 public:
-	Observer(Singleton* dataPool) : mDataPool(dataPool), mLastValue(dataPool->getValue()), mID(++sIDVar) {}
+	Observer(const Person& person) : mDataPool(person.getDataPool()), mLastValue(person.getDataPool()->getValue()), mID(++sIDVar) {}
 	void run(void);
 
 private:
